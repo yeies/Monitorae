@@ -105,3 +105,27 @@
         width: 90%;
     }
 }
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%; /* Usa quase toda a tela para melhor visualização */
+        max-width: 350px; /* Reduz um pouco o tamanho máximo */
+        padding: 15px; /* Reduz o padding */
+    }
+
+    .modal h1 {
+        font-size: 1.5em; /* Diminui o tamanho do título */
+    }
+
+    .modal p {
+        font-size: 1em; /* Ajusta o tamanho do texto */
+    }
+
+    .modal input {
+        font-size: 0.9em;
+    }
+
+    .modal button {
+        font-size: 1em;
+    }
+}
