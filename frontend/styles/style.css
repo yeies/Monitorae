@@ -252,6 +252,29 @@ html, body {
     }
 }
 
+/* Estiliza a barra de rolagem inteira */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra vertical */
+    height: 10px; /* Altura da barra horizontal */
+}
+
+/* Estiliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Cor do fundo */
+    border-radius: 5px;
+}
+
+/* Estiliza o "thumb" (a parte arrastável) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #70A37F; /* Cor da barra */
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #5b8d69; /* Cor mais escura no hover */
+}
+
 /* Telas muito pequenas */
 @media (max-width: 480px) {
     .container {

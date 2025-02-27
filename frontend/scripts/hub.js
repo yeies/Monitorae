@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (usuarioLogado && usuarioLogado.nome) {
         document.getElementById("user-name").textContent = usuarioLogado.nome;
     } else {
-        document.getElementById("user-name").textContent = "Usuário";
+        document.getElementById("user-name").textContent = "null";
     }
 });
 

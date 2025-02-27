@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/explorar.css">
+    <title>Explorar - Monitoraê</title>
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Monitoraê</h1>
+        <div class="user-info">
+            <span class="welcome-msg">Bem-vindo, <span id="user-name">Usuário</span></span>
+            <button id="logout">Sair</button>
+        </div>
+    </header>
+    
+    <nav class="nav-section">
+        <ul class="nav-links">
+            <li><a href="hub.html">Início</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="#">Monitores</a></li>
+            <li><a href="#">Minhas Aulas</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <input type="text" id="search-bar" placeholder="Pesquisar..." oninput="filterItems()">
+
+<div id="results-container">
+    <ul id="item-list">
+        <li class="item">📘 Matemática</li>
+        <li class="item">🧪 Química</li>
+        <li class="item">🔬 Física</li>
+        <li class="item">📖 Português</li>
+        <li class="item">🌎 Geografia</li>
+        <li class="item">Outros</li>
+    </ul>
+</div>
+
+
+        <h2>Explore as Matérias</h2>
+        <div class="categories">
+            <div class="category-card">📘 Matemática</div>
+            <div class="category-card">🧪 Química</div>
+            <div class="category-card">🔬 Física</div>
+            <div class="category-card">📖 Português</div>
+            <div class="category-card">🌎 Geografia</div>
+            <div class="category-card">Outros</div>
+        </div>
+        
+        <h2>Monitores Disponíveis</h2>
+        <div class="monitor-list">
+            <div class="monitor-card">
+                <h3>João Silva</h3>
+                <p>Especialista em Matemática</p>
+                <button>Ver Perfil</button>
+            </div>
+            <div class="monitor-card">
+                <h3>Ana Souza</h3>
+                <p>Professora de Física</p>
+                <button>Ver Perfil</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/hub.js"></script>
+    <script src="scripts/explorar.js"></script>
+</body>
+</html>
