@@ -46,12 +46,12 @@
     </div>
     <!-- Janela de Cadastro Modal -->
 <div class="modal" id="modalCadastro">
-    <div class="modal-content">
+    <div class="modal-content" id="cadastroForm">
         <span class="close" id="closeCadastro">&times;</span>
         <h1>Cadastro</h1>
         <p>Preencha as informações abaixo para criar sua conta:</p>
-        <input type="text" placeholder="Nome Completo">
-        <input type="email" placeholder="E-mail">
+        <input type="text" id="nome" placeholder="Nome Completo">
+        <input type="email" id="email" placeholder="E-mail">
         <div class="password-container">
             <input type="password" id="senha-cadastro" placeholder="Senha">
             <span class="toggle-password" onclick="togglePassword('senha-cadastro')">
