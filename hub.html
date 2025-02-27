@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Inicial</title>
+    <link rel="stylesheet" href="styles/hub.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Plataforma</h1>
+        <button id="logout">Sair</button>
+    </header>
+    
+    <main class="dashboard">
+        <div class="card">Funcionalidade 1</div>
+        <div class="card">Funcionalidade 2</div>
+        <div class="card">Funcionalidade 3</div>
+    </main>
+
+    <script>
+        document.getElementById("logout").addEventListener("click", function() {
+            window.location.href = "index.html"; // Redireciona para o login ao sair
+        });
+    </script>
+</body>
+</html>

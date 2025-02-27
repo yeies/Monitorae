@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <title>Monitoraê</title>
+</head>
+<body>
+    <div class="container">
+        <div class="janela_flutuante">
+            <div class="monitorae">
+                <h1 title="Monitoraê">Monitoraê</h1>
+            </div>
+            <div class="login">
+                <h2>Login</h2>
+            </div>
+            <div class="form">
+                <p>Email ou usuário</p>
+                <input type="text" name="email" placeholder="E-mail" title="Digite seu e-mail ou usuário">
+                <p>Senha</p>
+                <input type="password" name="senha" placeholder="Senha" title="Digite sua senha">
+                <button type="submit" title="Entrar">Entrar</button>
+            </div>
+            <div class="ajuda">
+                <a href="#" title="Recupere sua senha">Esqueceu a senha?</a>
+            </div>
+            <div class="cadastro">
+                <h3>Não tem uma conta?</h3>
+                <a href="#" id="openCadastro" title="Criar nova conta">Cadastre-se</a>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="content2-text">
+                <h1>Monitoraê</h1>                
+                <p>Encontre professores, assista videoaulas, converse em grupos. </p>
+                <p>Estude com a gente!</p>
+        </div>
+    </div>
+    <!-- Janela de Cadastro Modal -->
+<div class="modal" id="modalCadastro">
+    <div class="modal-content">
+        <span class="close" id="closeCadastro">&times;</span>
+        <h1>Cadastro</h1>
+        <p>Preencha as informações abaixo para criar sua conta:</p>
+        <input type="text" placeholder="Nome Completo">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Senha">
+        <button type="submit">Cadastrar</button>
+    </div>
+</div>
+<script src="scripts/modal.js"></script>
+</body>
+</html>

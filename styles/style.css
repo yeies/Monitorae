@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Nunito', sans-serif;
+    color: #003844;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 5%;
+    background-image: url('/imgs/imagem2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Janela Flutuante */
+.container .janela_flutuante {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EADDE1;
+    width: 100%;
+    max-width: 500px; /* Mantém um tamanho adequado */
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+    padding: 25px;
+    gap: 10px;
+}
+
+/* Título */
+.container .janela_flutuante .monitorae h1 {
+    text-align: center;
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 700;
+    width: 100%;
+}
+
+.container .janela_flutuante .monitorae h1 .destaque {
+    animation: rainbow 2.5s linear infinite;
+    text-decoration: 3px underline;
+}
+
+/* Subtítulo */
+.container .janela_flutuante .login h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* Formulário */
+.container .janela_flutuante .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.container .janela_flutuante .form p {
+    width: 100%;
+    text-align: start;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.container .janela_flutuante .form input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-bottom: 3px solid #0038449d;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #003844;
+}
+
+/* Botão */
+.container .janela_flutuante .form button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #003844;
+    color: #EADDE1;
+    font-size: 1.8em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container .janela_flutuante .form button:hover {
+    background-color: #70A37F;
+    color: #003844;
+}
+
+/* Links */
+.container .janela_flutuante .ajuda,
+.container .janela_flutuante .cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container .janela_flutuante .ajuda a,
+.container .janela_flutuante .cadastro a {
+    font-size: 1em;
+    font-weight: 600;
+    color: #0038449d;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.container .janela_flutuante .ajuda a:hover,
+.container .janela_flutuante .cadastro a:hover {
+    color: #003844;
+}
+
+/* content2 */
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.content2-text h1 {
+    font-size: 5em;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1); /* Cria um brilho escuro ao redor */
+}
+
+.content2-text p {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 1); /* Cria um brilho escuro ao redor */
+}
+
+
+/* 🔹 Media Queries para Responsividade 🔹 */
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .container .janela_flutuante {
+        width: 85%;
+        max-width: 400px;
+    }
+
+    .content2 {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .content2-text h1 {
+        font-size: 2em;
+    }
+
+    .content2-text p {
+        font-size: 1em;
+    }
+}
+
+/* Para telas menores, tipo celular */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .container .janela_flutuante {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .content2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .content2-text h1 {
+        font-size: 1.8em;
+    }
+
+    .content2-text p {
+        font-size: 0.9em;
+    }
+
+    /* Modal Responsivo */
+    .modal-content {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+    .container {
+        padding: 3%;
+    }
+
+    .container .janela_flutuante {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .content2-text h1 {
+        font-size: 1.5em;
+    }
+
+    .content2-text p {
+        font-size: 0.85em;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

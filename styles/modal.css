@@ -1,0 +1,107 @@
+/* Estilos para o modal */
+.modal {
+        display: none; /* Modal escondido por padrão */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Inicialmente invisível */
+        transition: opacity 0.25s ease; /* Transição suave para visibilidade */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EADDE1;
+    width: fit-content;
+    min-width: 500px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+    padding: 30px;
+    gap: 10px;
+    transform: translateY(-50px); /* Inicialmente fora da tela */
+    transition: opacity 0.25s ease, transform 0.25s ease; /* Transição suave */
+}
+
+.close {
+    color: #aaa;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos do formulário de cadastro */
+.modal-content input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid #0038449d;
+    background-color: transparent;
+    font-size: 1.25em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: #003844;
+}
+
+.modal-content button {
+    width: 100%;
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    background-color: #003844;
+    color: #EADDE1;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.modal-content button:hover {
+    background-color: #70A37F;
+    color: #003844;
+}
+
+.modal-content h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.modal-content p {
+    width: 100%;
+    text-align: start;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 10%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
