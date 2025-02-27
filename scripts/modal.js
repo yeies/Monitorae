@@ -92,3 +92,18 @@ document.querySelector(".form button").addEventListener("click", function() {
         alert("Usuário ou senha incorretos!");
     }
 });
+
+function togglePassword(inputId) {
+    let input = document.getElementById(inputId);
+    let icon = input.nextElementSibling.querySelector("i");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye"); // Ícone de olho fechado
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    }
+}

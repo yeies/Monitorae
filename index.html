@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Monitoraê</title>
 </head>
 <body>
@@ -20,7 +21,12 @@
                 <p>Email ou usuário</p>
                 <input type="text" name="email" placeholder="E-mail" title="Digite seu e-mail ou usuário">
                 <p>Senha</p>
-                <input type="password" name="senha" placeholder="Senha" title="Digite sua senha">
+                <div class="password-container">
+                    <input type="password" name="senha" id="senha-login" placeholder="Senha" title="Digite sua senha">
+                    <span class="toggle-password" onclick="togglePassword('senha-login')">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </span>
+                </div>
                 <button type="submit" title="Entrar">Entrar</button>
             </div>
             <div class="ajuda">
@@ -46,7 +52,12 @@
         <p>Preencha as informações abaixo para criar sua conta:</p>
         <input type="text" placeholder="Nome Completo">
         <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Senha">
+        <div class="password-container">
+            <input type="password" id="senha-cadastro" placeholder="Senha">
+            <span class="toggle-password" onclick="togglePassword('senha-cadastro')">
+                <i class="fa-solid fa-eye-slash"></i>
+            </span>
+        </div>
         <button type="submit">Cadastrar</button>
     </div>
 </div>

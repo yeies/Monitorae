@@ -89,6 +89,31 @@ html, body {
     color: #003844;
 }
 
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Dá espaço para o ícone do olho */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #003844;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: #70A37F;
+}
+
 /* Botão */
 .container .janela_flutuante .form button {
     width: 100%;
