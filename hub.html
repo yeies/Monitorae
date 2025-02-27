@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/hub.css">
-    <title>Hub Inicial</title>
+    <title>Hub - Monitoraê</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Monitoraê</h1>
-            <section class="banner">
-                
-            </section>
-            <div class="user-info">
-                <span id="welcome-message">Bem-vindo, Usuário!</span>
-                <button id="logout">Sair</button>
-            </div>
-        </nav>
+    <header class="navbar">
+        <h1 class="logo">Monitoraê</h1>
+        <div class="user-info">
+            <span class="welcome-msg">Bem-vindo, <span id="userName">Usuário</span></span>
+            <button id="logout">Sair</button>
+        </div>
     </header>
-
-    <!-- Seção para o banner futuramente -->
     
-
-    <!-- Segunda seção: Links de navegação -->
     <nav class="nav-section">
         <ul class="nav-links">
             <li><a href="#">Início</a></li>
-            <li><a href="#">Aulas</a></li>
-            <li><a href="#">Professores</a></li>
-            <li><a href="#">Comunidade</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Monitores</a></li>
+            <li><a href="#">Minhas Aulas</a></li>
         </ul>
     </nav>
 
     <main class="dashboard">
-        <!-- Conteúdo do Hub -->
+        <h2>Explore as Matérias</h2>
+        <div class="categories">
+            <div class="category-card">📘 Matemática</div>
+            <div class="category-card">🧪 Química</div>
+            <div class="category-card">🔬 Física</div>
+            <div class="category-card">📖 Português</div>
+            <div class="category-card">🌎 Geografia</div>
+            <div class="category-card">Outros</div>
+            <div class="category-card">Outros</div>
+            <div class="category-card">Outros</div>
+            <div class="category-card">Outros</div>
+            <div class="category-card">Outros</div>
+        </div>
+        
+        <h2>Monitores Disponíveis</h2>
+        <div class="monitor-list">
+            <div class="monitor-card">
+                <img src="images/monitor1.jpg" alt="Monitor 1">
+                <h3>João Silva</h3>
+                <p>Especialista em Matemática</p>
+                <button>Ver Perfil</button>
+            </div>
+            <div class="monitor-card">
+                <img src="images/monitor2.jpg" alt="Monitor 2">
+                <h3>Ana Souza</h3>
+                <p>Professora de Física</p>
+                <button>Ver Perfil</button>
+            </div>
+        </div>
     </main>
-
+    
     <script src="scripts/hub.js"></script>
 </body>
 </html>
