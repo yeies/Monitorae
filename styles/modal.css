@@ -1,18 +1,19 @@
 /* Estilos para o modal */
 .modal {
-        display: none; /* Modal escondido por padrão */
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-        overflow: auto;
-        justify-content: center;
-        align-items: center;
-        opacity: 0; /* Inicialmente invisível */
-        transition: opacity 0.25s ease; /* Transição suave para visibilidade */
+    display: none; /* Modal escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.25s ease; /* Transição suave para visibilidade */
 }
 
 .modal-content {
@@ -21,13 +22,14 @@
     justify-content: center;
     align-items: center;
     background-color: #EADDE1;
-    width: fit-content;
-    min-width: 500px;
+    width: 90%;
+    max-width: 500px;
     height: fit-content;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
     padding: 30px;
     gap: 10px;
+    position: relative;
     transform: translateY(-50px); /* Inicialmente fora da tela */
     transition: opacity 0.25s ease, transform 0.25s ease; /* Transição suave */
 }
@@ -66,13 +68,13 @@
 
 .modal-content button {
     width: 100%;
-    height: 75px;
+    height: 60px;
     border: none;
     border-radius: 10px;
     background-color: #003844;
     color: #EADDE1;
     font-family: 'Nunito', sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     cursor: pointer;
     transition: 0.25s;
@@ -86,46 +88,61 @@
 .modal-content h1 {
     width: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 700;
 }
 
 .modal-content p {
     width: 100%;
     text-align: start;
-    font-size: 1.5em;
-    font-weight: 700;
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
+/* Responsividade para tablets */
 @media (max-width: 768px) {
-    .modal {
-        padding: 10%;
-    }
     .modal-content {
-        width: 90%;
+        width: 80%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .modal-content h1 {
+        font-size: 2em;
+    }
+
+    .modal-content p {
+        font-size: 1.2em;
+    }
+
+    .modal-content button {
+        font-size: 1.5em;
+        height: 55px;
     }
 }
 
+/* Responsividade para celulares */
 @media (max-width: 480px) {
     .modal-content {
-        width: 95%; /* Usa quase toda a tela para melhor visualização */
-        max-width: 350px; /* Reduz um pouco o tamanho máximo */
-        padding: 15px; /* Reduz o padding */
+        width: 95%;
+        max-width: 350px;
+        padding: 15px;
     }
 
     .modal h1 {
-        font-size: 1.5em; /* Diminui o tamanho do título */
+        font-size: 1.6em;
     }
 
     .modal p {
-        font-size: 1em; /* Ajusta o tamanho do texto */
+        font-size: 1em;
     }
 
     .modal input {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .modal button {
-        font-size: 1em;
+        font-size: 1.2em;
+        height: 50px;
     }
 }
