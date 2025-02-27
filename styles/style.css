@@ -18,7 +18,7 @@ html, body {
     height: 100vh;
     width: 100vw;
     padding: 5%;
-    background-image: url('https://github.com/yeies/Monitorae/blob/ea4fa33c556d9075163f92d99c3f47a5991e8fab/imgs/imagem2.jpg');
+    background-image: url('imgs/imagem2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
