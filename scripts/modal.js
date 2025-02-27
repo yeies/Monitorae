@@ -1,50 +1,37 @@
-// Obter o modal
-var modal = document.getElementById("modalCadastro");
+document.addEventListener("DOMContentLoaded", function () {
+    var modal = document.getElementById("modalCadastro");
+    var btn = document.getElementById("openCadastro");
+    var span = document.getElementById("closeCadastro");
 
-// Obter o botão que abre o modal
-var btn = document.getElementById("openCadastro");
+    // Função para abrir o modal
+    btn.onclick = function () {
+        modal.style.display = "flex"; // Torna o modal visível
+        setTimeout(() => {
+            modal.style.opacity = "1";
+            modal.querySelector('.modal-content').style.transform = "translateY(0)";
+        }, 10); // Pequeno delay para animação funcionar
+    };
 
-// Obter o <span> que fecha o modal
-var span = document.getElementById("closeCadastro");
+    // Função para fechar o modal
+    span.onclick = function () {
+        fecharModal();
+    };
 
-// Função para abrir o modal com transição
-btn.onclick = function() {
-    // Exibe o modal inicialmente
-    modal.style.display = "flex"; 
-    
-    // Adiciona um pequeno atraso para garantir que o layout seja renderizado antes da animação
-    setTimeout(function() {
-        // Aplica a animação de transição para o modal
-        modal.style.opacity = 1; // Torna visível
-        modal.querySelector('.modal-content').style.transform = "translateY(0)"; // Move para a posição original
-    }, 10); // 10ms de delay para garantir que o layout tenha tempo de ser carregado
-};
+    // Fecha ao clicar fora do modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            fecharModal();
+        }
+    };
 
-// Função para fechar o modal com transição
-span.onclick = function() {
-    // Adiciona transição de saída
-    modal.style.opacity = 0; // Torna invisível
-    modal.querySelector('.modal-content').style.transform = "translateY(-50px)"; // Move para fora da tela
-    
-    // Aguarda o tempo da animação para esconder completamente o modal
-    setTimeout(function() {
-        modal.style.display = "none"; // Esconde o modal
-    }, 250); // O tempo do setTimeout deve ser igual ao da animação
-};
-
-// Fechar o modal ao clicar fora dele
-window.onclick = function(event) {
-    if (event.target == modal) {
-        // Adiciona transição de saída
-        modal.style.opacity = 0; // Torna invisível
-        modal.querySelector('.modal-content').style.transform = "translateY(-50px)"; // Move para fora da tela
-        
-        // Aguarda o tempo da animação para esconder completamente o modal
-        setTimeout(function() {
-            modal.style.display = "none"; // Esconde o modal
-        }, 250); // O tempo do setTimeout deve ser igual ao da animação
+    function fecharModal() {
+        modal.style.opacity = "0";
+        modal.querySelector('.modal-content').style.transform = "translateY(-50px)";
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 250);
     }
-}
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const cadastroBtn = document.querySelector("#modalCadastro button"); // Botão de cadastro
@@ -100,10 +87,10 @@ function togglePassword(inputId) {
     if (input.type === "password") {
         input.type = "text";
         icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye"); // Ícone de olho fechado
+        icon.classList.add("fa-eye"); // Altera para olho aberto
     } else {
         input.type = "password";
         icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
+        icon.classList.add("fa-eye-slash"); // Altera para olho fechado
     }
 }
