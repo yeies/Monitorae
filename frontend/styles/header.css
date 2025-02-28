@@ -10,6 +10,7 @@
 }
 
 body {
+    width: 100vw;
     background-color: #f4f4f4;
 }
 
@@ -24,12 +25,25 @@ body {
     color: #f4f4f4;
     padding: 15px 20px;
     border-bottom: 3px solid #70A37F;
+    gap: 20px;
 }
 
 .logo {
     font-size: 1.8em;
     font-weight: bold;
+    font-style: italic;
 }
+
+.banner {
+    width: 100%;
+    height: 67px;
+    overflow: hidden;
+    background-image: url('imgs/imagem1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .user-info {
     font-size: 1.2em;
@@ -38,7 +52,7 @@ body {
     gap: 15px;
 }
 
-#logout {
+button {
     background-color: #70A37F;
     color: #f4f4f4;
     border: none;
@@ -46,9 +60,10 @@ body {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1em;
+    transition: 0.3s;
 }
 
-#logout:hover {
+button:hover {
     background-color: #5b8d69;
 }
 
@@ -70,6 +85,7 @@ body {
     font-size: 1.2em;
     color: #f4f4f4;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -97,6 +113,16 @@ body {
 /* Efeito ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
     background: #5b8d69; /* Cor mais escura no hover */
+}
+
+.dashboard{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    color: #003844;
 }
 
 /* Responsividade */

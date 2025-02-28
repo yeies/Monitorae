@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificamos se existe um usuário logado
     if (usuarioLogado && usuarioLogado.nome) {
         document.getElementById("user-name").textContent = usuarioLogado.nome;
+        document.getElementById("user-name-main").textContent = usuarioLogado.nome;
     } else {
         document.getElementById("user-name").textContent = "null";
+        document.getElementById("user-name-main").textContent = "null";
     }
 });
 

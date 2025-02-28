@@ -87,6 +87,7 @@ html, body {
     font-size: 1.2em;
     font-weight: 500;
     color: #003844;
+    outline: none;
 }
 
 .password-container {

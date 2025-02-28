@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hub.css">
+    <link rel="stylesheet" href="styles/monitores.css">
     <link rel="preload" href="styles/imgs/imagem1.jpg" as="image">
-    <title>Hub - Monitoraê</title>
+    <title>Explorar - Monitoraê</title>
 </head>
 <body>
     <header class="navbar">
@@ -28,17 +28,25 @@
         </ul>
     </nav>
 
-    
-    
     <main class="dashboard">
-        <h2>Olá, <span id="user-name-main">Usuário</span>!</h2>
-        <p>Seja bem-vindo ao Monitoraê! Aqui você pode explorar as matérias disponíveis, encontrar monitores para te ajudar e acessar suas aulas.</p>
-        <section class="esquerda">
-            
-        </section>
-        <section class="direita"></section>
+        
+        
+        <h2>Monitores Disponíveis</h2>
+        <div class="monitor-list">
+            <div class="monitor-card">
+                <h3>João Silva</h3>
+                <p>Especialista em Matemática</p>
+                <button>Ver Perfil</button>
+            </div>
+            <div class="monitor-card">
+                <h3>Ana Souza</h3>
+                <p>Professora de Física</p>
+                <button>Ver Perfil</button>
+            </div>
+        </div>
     </main>
-    
+
+    <script src="scripts/monitores.js"></script>
     <script src="scripts/hub.js"></script>
 </body>
 </html>
