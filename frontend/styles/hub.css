@@ -1,3 +1,7 @@
+#hub {
+    color: #5b8d69;
+}
+
 .dashboard {
     width: 100vw;
     height: 100%;
@@ -162,7 +166,7 @@
 }
 
 .dashboard aside{
-    width: 600px;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;

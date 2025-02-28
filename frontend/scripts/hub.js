@@ -18,7 +18,6 @@ document.getElementById("logout").addEventListener("click", function() {
     window.location.href = "index.html"; // Redireciona para a página inicial
 });
 
-
 const status = document.getElementById("textoStatus");
 const botao = document.getElementById("perfil");
 
