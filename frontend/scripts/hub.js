@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Verificamos se existe um usuário logado
     if (usuarioLogado && usuarioLogado.nome) {
-        document.getElementById("user-name").textContent = usuarioLogado.nome;
-        document.getElementById("user-name-main").textContent = usuarioLogado.nome;
+        document.getElementById("userName").textContent = usuarioLogado.nome;
+        document.getElementById("userName-aside").textContent = usuarioLogado.nome;
     } else {
-        document.getElementById("user-name").textContent = "null";
-        document.getElementById("user-name-main").textContent = "null";
+        document.getElementById("userName").textContent = "Usuário";
+        document.getElementById("userName-aside").textContent = "Usuário";
     }
 });
 
@@ -18,8 +18,17 @@ document.getElementById("logout").addEventListener("click", function() {
     window.location.href = "index.html"; // Redireciona para a página inicial
 });
 
-// Função para abrir e fechar o menu em telas menores
-function toggleMenu() {
-    let navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active");
-}
+
+const status = document.getElementById("textoStatus");
+const botao = document.getElementById("perfil");
+
+botao.addEventListener("click", () => {
+    status.classList.toggle("afk");
+
+    if (status.classList.
+        contains("afk")) {
+        status.textContent = "• Ausente";
+    } else {
+        status.textContent = "• Online";
+    }
+})

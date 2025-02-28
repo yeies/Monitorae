@@ -11,56 +11,96 @@
 
 body {
     width: 100vw;
-    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
 }
 
 /* Navbar principal */
-.navbar {
+.header {
     width: 100%;
-    min-height: 100px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-cima {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #003844;
-    color: #f4f4f4;
-    padding: 15px 20px;
     border-bottom: 3px solid #70A37F;
-    gap: 20px;
 }
 
-.logo {
-    font-size: 1.8em;
+.header-cima .logo {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-cima .logo h1 {
+    color: #FFFFFF;
     font-weight: bold;
     font-style: italic;
+    font-size: 40px;
 }
-
-.banner {
-    width: 100%;
-    height: 67px;
-    overflow: hidden;
-    background-image: url('imgs/imagem1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
+/*-----*/
 .user-info {
-    font-size: 1.2em;
+    width: fit-content;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
 }
 
-button {
-    background-color: #70A37F;
-    color: #f4f4f4;
-    border: none;
+.user-info .boas-vindas {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info .boas-vindas .welcome-msg {
+    color: #FFFFFF;
+    font-weight: medium;
+    font-size: 32px;
+    text-align: center;
+}
+
+.buttons {
+    width: fit-content;
+    height: 100%;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button{
+    background-color: #70A37F;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    width: fit-content;
+    height: 100%;
+    font-weight: medium;
+    font-size: 32px;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -68,23 +108,43 @@ button:hover {
 }
 
 /* Seção dos links de navegação */
-.nav-section {
+.nav-bar {
+    width: 100%;
+    height: fit-content;
     background-color: #003844;
-    padding: 10px 0;
+    padding:0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    list-style: none;
+    align-items: center;
+    padding: 0;
     gap: 20px;
 }
 
-.nav-links a {
+.nav-links li {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav-links li a {
+    width: fit-content;
+    height: fit-content;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 32px;
+    font-weight: medium;
+    text-align: center;
     color: #f4f4f4;
-    font-weight: bold;
     transition: 0.3s;
 }
 
@@ -100,48 +160,76 @@ button:hover {
 
 /* Estiliza o fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-    background: #f4f4f4; /* Cor do fundo */
+    background: rgba(255, 255, 255, 0.25); /* Cor do fundo */
     border-radius: 5px;
 }
 
 /* Estiliza o "thumb" (a parte arrastável) da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-    background: #70A37F; /* Cor da barra */
+    background: #FFFFFF; /* Cor da barra */
     border-radius: 5px;
 }
 
 /* Efeito ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
-    background: #5b8d69; /* Cor mais escura no hover */
-}
-
-.dashboard{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    color: #003844;
+    background: #003844; /* Cor mais escura no hover */
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .nav-links {
-        font-size: 0.8em;
+@media (max-width: 828px) {
+    .header .header-cima .logo h1 {
+        font-size: 26px;
+    }
+
+    .header .header-cima .user-info .boas-vindas .welcome-msg, 
+    .header .header-cima .user-info .buttons button {
+        font-size: 18px;
         text-align: center;
-        gap: 15px;
+    }
+
+    .nav-bar .nav-links li a{
+        font-size: 18px;
+        text-align: center;
     }
 }
-@media (max-width: 480px) {
-    .navbar {
+@media (max-width: 525px) {
+    .header .header-cima {
         flex-direction: column;
         gap: 10px;
     }
     
-    .user-info {
+    .header .header-cima .user-info {
+        font-size: 16px;
         width: 100%;
+        flex-direction: column;
         justify-content: space-between;
         gap: 10px;
+    }
+
+    .nav-bar .nav-links {
+        justify-content: start;
+        overflow-x: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px; /* Largura da barra vertical */
+        height: 0px; /* Altura da barra horizontal */
+    }
+    
+    /* Estiliza o fundo da barra de rolagem */
+    ::-webkit-scrollbar-track {
+        background: transparent; /* Cor do fundo */
+        border-radius: 5px;
+    }
+    
+    /* Estiliza o "thumb" (a parte arrastável) da barra de rolagem */
+    ::-webkit-scrollbar-thumb {
+        background: transparent; /* Cor da barra */
+        border-radius: 5px;
+    }
+    
+    /* Efeito ao passar o mouse */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #9e9e9e; /* Cor mais escura no hover */
     }
 }

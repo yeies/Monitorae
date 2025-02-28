@@ -9,34 +9,63 @@
     <title>Hub - Monitoraê</title>
 </head>
 <body>
-    <header class="navbar">
-        <h1 class="logo">Monitoraê</h1>
-        <section class="banner" alt="Banner"></section>
-        <div class="user-info">
-            <span class="welcome-msg">Bem-vindo, <span id="user-name">Usuário</span></span>
-            <button id="logout">Sair</button>
+    <header class="header">
+        <div class="header-cima">
+
+            <div class="logo">
+                <h1>Monitoraê</h1>
+            </div>
+            <!--<section class="banner" alt="Banner"></section>-->
+            <div class="user-info">
+                <div class="boas-vindas">
+                    <span class="welcome-msg">Olá, <span id="userName">Usuário</span></span>
+                </div>
+                <div class="buttons">
+                    <button id="perfil">Perfil</button>
+                    <button id="logout">Sair</button>
+                </div>
+            </div>
         </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="hub.html">Hub</a></li>
+                <li><a href="explorar.html">Explorar</a></li>
+                <li><a href="monitores.html">Monitores</a></li>
+                <li><a href="aulas.html">Minhas Aulas</a></li>
+                <li><a href="Comunidade.html">Comunidade</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <nav class="nav-section">
-        <ul class="nav-links">
-            <li><a href="hub.html">Início</a></li>
-            <li><a href="explorar.html">Explorar</a></li>
-            <li><a href="monitores.html">Monitores</a></li>
-            <li><a href="aulas.html">Minhas Aulas</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
-        </ul>
-    </nav>
+    
 
     
     
     <main class="dashboard">
-        <h2>Olá, <span id="user-name-main">Usuário</span>!</h2>
-        <p>Seja bem-vindo ao Monitoraê! Aqui você pode explorar as matérias disponíveis, encontrar monitores para te ajudar e acessar suas aulas.</p>
-        <section class="esquerda">
-            
-        </section>
-        <section class="direita"></section>
+        <div class="container">
+            <div class="noticia-topicos"></div>
+            <div class="noticia-topicos-content"></div>
+            <div class="monitores-aulas"></div>
+            <div class="monitores-aulas-content"></div>
+        </div>
+        <aside>
+            <div class="info-usuario">
+                <div class="cardUsuario">
+                    <div class="foto"></div>
+                    <div class="texto">
+                        <h3 id="userName-aside">Usuário</h3>
+                        <p id="textoStatus" class="status">• Online</p>
+                    </div>
+                </div>
+                <div class="extra">
+
+                </div>
+            </div>
+            <div class="botao-extra">
+                <div class="botao-chat">
+                </div>
+            </div>
+        </aside>
     </main>
     
     <script src="scripts/hub.js"></script>
